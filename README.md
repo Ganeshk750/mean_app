@@ -1,2 +1,2 @@
-# mean_app
+# Mean_app
 MEAN App  with Mysql
