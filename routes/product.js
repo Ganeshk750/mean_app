@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 
 var model = require('../model/product-model');
-
+// This is first api for testing
 // router.get('/', function(req, res) {
 //     model.getProducts(function(err, result) {
 //         if(err) {
