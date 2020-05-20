@@ -3,16 +3,14 @@ var db = require("../db");
 var dateFormat = require('dateformat')
 
 let model = {
-    // getProducts: (cb) => {
-    //     return db.query("SELECT * FROM products", cb)
-    // },
-    
     getProduct: (id, cb) => {
         return db.query("SELECT * FROM products WHERE id=?", [id], cb)
     },
-
     getProducts: (offset, limit, cb) => {
         return db.query("SELECT * FROM products LIMIT ?, ?", [+offset, +limit], cb)
+    },
+    getTotalProducts: (cb) => {
+        return db.query("SELECT COUNT(*) AS total FROM products", cb);
     },
     getTotalProducts: (cb) => {
         return db.query("SELECT COUNT(*) AS total FROM products", cb);
